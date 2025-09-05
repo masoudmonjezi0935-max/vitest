@@ -1,4 +1,4 @@
----
+---po
 outline: deep
 ---
 
@@ -120,7 +120,7 @@ Use `test.extend` to extend the test context with custom fixtures. This will ret
 ```ts
 import { expect, test } from 'vitest'
 
-const todos = []
+const todos = [
 const archive = []
 
 const myTest = test.extend({
@@ -140,7 +140,7 @@ myTest('add item', ({ todos }) => {
 })
 ```
 
-### test.skip
+### skip
 
 - **Alias:** `it.skip`
 
@@ -212,7 +212,7 @@ const isDev = process.env.NODE_ENV === 'development'
 
 test.runIf(isDev)('dev only test', () => {
   // this test only runs in development
-})
+)
 ```
 
 ::: warning
@@ -348,7 +348,7 @@ You cannot use this syntax when using Vitest as [type checker](/guide/testing-ty
 
 ::: tip
 While `test.each` is provided for Jest compatibility,
-Vitest also has [`test.for`](#test-for) with an additional feature to integrate [`TestContext`](/guide/test-context).
+Vitest also has [`test.for`](#test-for) with an additional feature to integrate [`testcontects`](/guide/test-context).
 :::
 
 Use `test.each` when you need to run the same test with different variables.
